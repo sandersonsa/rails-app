@@ -3,6 +3,10 @@
 echo " ### Instalar requisitos ### "
 gem install bundler:2.3.15
 
+echo " #### remover ./ #### "
+rm -rf ./bin/*
+rm -rf ./config/*
+
 function rake_assets_precompile() {
   [[ "$DISABLE_ASSET_COMPILATION" == "true" ]] && return
   [ ! -f Gemfile ] && return
